@@ -17,7 +17,7 @@ void Game::Loop(){
             
             if(Event::KeyReleased){
                 
-                chicken.Move(e);
+                chicken->Move(e);
                 
             }
             
