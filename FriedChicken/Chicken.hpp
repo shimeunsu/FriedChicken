@@ -4,7 +4,7 @@ using namespace sf;
 
 class Chicken{
     
-pubblic:
+public:
     Chicken(Vector2u size);
     void Draw(RenderWindow &r);
     void Move(Event e);
@@ -15,4 +15,4 @@ private:
     RectangleShape chicken;
     
     
-}
+};

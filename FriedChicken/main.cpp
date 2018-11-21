@@ -8,7 +8,7 @@ using namespace sf;
 int main() {
     // insert code here...
     RenderWindow* r = new RenderWindow(VideoMode(640, 480), "test");
-    Chicken chicken(r->getSize());
+    Chicken chicken(r.getSize());
     
     
     RectangleShape human;
