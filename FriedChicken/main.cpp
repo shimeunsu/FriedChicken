@@ -7,7 +7,7 @@ using namespace sf;
 
 int main() {
     // insert code here...
-    RenderWindow* r = new RenderWindow(VideoMode(640, 480), "test");
+    RenderWindow r(VideoMode(640, 480), "test");
     Chicken chicken(r.getSize());
     
     
@@ -16,10 +16,10 @@ int main() {
     human.setFillColor(Color::Yellow);
     human.setPosition(Vector2f(human.getPosition().x, r->getSize().y / 2 - human.getSize().y));
     
-    while (r->isOpen()) {
+    while (r.isOpen()) {
         Event e;
         
-        while (r->pollEvent(e)) {
+        while (r.pollEvent(e)) {
             
             if(Event::KeyReleased){
                 
@@ -33,19 +33,19 @@ int main() {
         }
         //update the game
         human.move(0.2, 0.0);
-        if(human.getPosition().x > r->Window::getSize().x){
-            human.setPosition(Vector2f(-human.getSize().x, r->getSize().y / 2 - human.getSize().y));
+        if(human.getPosition().x > r.Window::getSize().x){
+            human.setPosition(Vector2f(-human.getSize().x, r.getSize().y / 2 - human.getSize().y));
         }
          
         if(chicken.GetShape().getGlobalBounds().intersects(human.getGlobalBounds()){
-            r->close();
+            r.close();
         }
-        r->clear();
+        r.clear();
         
-        r->draw(human);
+        r.draw(human);
            chicken.Draw(r);
         //insert here
-        r->display();
+        r.display();
     }
     std::cout << "Hello, World!\n";
     return 0;

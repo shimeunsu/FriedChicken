@@ -6,7 +6,7 @@ Chicken::Chicken(Vector2u size){
     chicken.setPosition(Vector2f(chicken.getPosition().x, size.y - chicken.getSize().y));
 }
 void Chicken::Draw(RenderWindow &r){
-    r->draw(chicken); 
+    r.draw(chicken); 
 }
 void Chicken::Move(Event e){
     if(Keyboard::Key::Right == e.key.code){
