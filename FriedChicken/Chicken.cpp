@@ -1,5 +1,7 @@
-
+#include <iostream>
+#include <SFML/Graphics.hpp>
 #include "Chicken.hpp"
+using namespace sf;
 
 Chicken::Chicken(Vector2u size){
     chicken.setSize(Vector2f(80.0f,80.0f));

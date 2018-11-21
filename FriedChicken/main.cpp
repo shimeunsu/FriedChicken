@@ -1,6 +1,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Chicken.hpp"
+#include "Chicken.cpp"
 
 using namespace std;
 using namespace sf;
