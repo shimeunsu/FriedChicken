@@ -3,7 +3,7 @@
 #include "Game.hpp"
 
 Game::Game(){
-    r = new RenderWindow(VideoMode(640, 480), "Fried Chicken");
+    r = new RenderWindow(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE);
     chicken = new Chicken(r->getSize());
     human = new Human(0,r->getSize().y / 2);
     

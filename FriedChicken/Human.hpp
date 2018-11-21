@@ -2,18 +2,17 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "BaseObject.hpp"
+#include "DEFINITIONS.hpp"
 using namespace sf;
 
-class Human{
+class Human:public BaseObject{
     
 public:
     Human(float posX, float posY);
-    void Draw(RenderWindow &r);
     void Move(Vector2u size);
-    RectangleShape GetShape();
     
 private:
-    RectangleShape human;
     float originalPosX, originalPosY;
     
     

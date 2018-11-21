@@ -6,6 +6,8 @@
 #include "Chicken.cpp"
 #include "Human.hpp"
 #include "Human.cpp"
+#include "DEFINITIONS.hpp"
+
 using namespace sf;
 
 class Game{

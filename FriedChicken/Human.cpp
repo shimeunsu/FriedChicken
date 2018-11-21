@@ -1,29 +1,24 @@
 #include "Human.hpp"
 
 Human::Human(float posX, float posY){
-    human.setSize(Vector2f(60,120));
-    human.setFillColor(Color::Yellow);
-    human.setPosition(Vector2f(posX,posY));
+    shape.setSize(Vector2f(HUMAN_SIZE_WIDTH,HUMAN_SIZE_HEIGHT));
+    shape.setFillColor(Color::Yellow);
+    shape.setPosition(Vector2f(posX,posY));
     
     originalPosX = posX;
     originalPosY = posY;
     
 }
-void Human::Draw(RenderWindow &r){
-    r.draw(human);
-}
+
 void Human::Move(Vector2u size){
-    human.move(0.2, 0.0);
-    if(human.getPosition().x > size.x){
-        human.setPosition(Vector2f(-human.getSize().x, originalPosY));
+    shape.move(HUMAN_MOVEMENT_SPEED, 0.0);
+    if (shape.getPosition().x > size.x){
+        shape.setPosition(Vector2f(-shape.getSize().x, originalPosY));
     }
     
     
 }
-RectangleShape Human::GetShape(){
-    return human;
-    
-}
+
 
 
 

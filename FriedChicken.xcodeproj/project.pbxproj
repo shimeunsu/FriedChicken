@@ -37,6 +37,7 @@
 		53DA811521A5DB3D00786084 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		53DA811721A5DFDC00786084 /* BaseObject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BaseObject.cpp; sourceTree = "<group>"; };
 		53DA811821A5DFDC00786084 /* BaseObject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseObject.hpp; sourceTree = "<group>"; };
+		53DA811A21A5E39900786084 /* DEFINITIONS.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DEFINITIONS.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 				53DA811521A5DB3D00786084 /* Game.hpp */,
 				53DA811721A5DFDC00786084 /* BaseObject.cpp */,
 				53DA811821A5DFDC00786084 /* BaseObject.hpp */,
+				53DA811A21A5E39900786084 /* DEFINITIONS.hpp */,
 			);
 			path = FriedChicken;
 			sourceTree = "<group>";
