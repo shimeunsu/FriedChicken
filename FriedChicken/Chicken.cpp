@@ -4,7 +4,7 @@
 using namespace sf;
 
 Chicken::Chicken(Vector2u size){
-    shape.setSize(Vector2f(CHICKEN_SIZE_WIDTH,CHICKEN_SIZE_HEIGHT);
+    shape.setSize(Vector2f(CHICKEN_SIZE_WIDTH,CHICKEN_SIZE_HEIGHT));
     shape.setPosition(Vector2f(shape.getPosition().x, size.y - shape.getSize().y));
 }
 
