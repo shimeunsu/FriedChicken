@@ -1,6 +1,6 @@
 
 #include "BaseObject.hpp"
-
+using namespace sf;
 
 BaseObject::BaseObject(){
     
