@@ -14,7 +14,7 @@ int main() {
     RectangleShape human;
     human.setSize(Vector2f(60,120));
     human.setFillColor(Color::Yellow);
-    human.setPosition(Vector2f(human.getPosition().x, r->getSize().y / 2 - human.getSize().y));
+    human.setPosition(Vector2f(human.getPosition().x, r.getSize().y / 2 - human.getSize().y));
     
     while (r.isOpen()) {
         Event e;
@@ -37,7 +37,7 @@ int main() {
             human.setPosition(Vector2f(-human.getSize().x, r.getSize().y / 2 - human.getSize().y));
         }
          
-        if(chicken.GetShape().getGlobalBounds().intersects(human.getGlobalBounds()){
+        if(chicken.GetShape().getGlobalBounds().intersects(human.getGlobalBounds())){
             r.close();
         }
         r.clear();
