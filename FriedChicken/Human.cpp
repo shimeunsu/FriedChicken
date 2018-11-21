@@ -15,7 +15,7 @@ void Human::Draw(RenderWindow &r){
 void Human::Move(Vector2u size){
     human.move(0.2, 0.0);
     if(human.getPosition().x > size.x){
-        human.setPosition(Vector2f(-human.getSize().x, size.y / 2 - human.getSize().y));
+        human.setPosition(Vector2f(-human.getSize().x, originalPosY));
     }
     
     

@@ -10,6 +10,7 @@
 		53DA810821A4ABB300786084 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53DA810721A4ABB300786084 /* main.cpp */; };
 		53DA811021A5CD0500786084 /* Chicken.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53DA810E21A5CD0500786084 /* Chicken.cpp */; };
 		53DA811321A5D62900786084 /* Human.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53DA811121A5D62900786084 /* Human.cpp */; };
+		53DA811621A5DB3D00786084 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 53DA811421A5DB3D00786084 /* Game.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		53DA810F21A5CD0500786084 /* Chicken.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Chicken.hpp; sourceTree = "<group>"; };
 		53DA811121A5D62900786084 /* Human.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Human.cpp; sourceTree = "<group>"; };
 		53DA811221A5D62900786084 /* Human.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Human.hpp; sourceTree = "<group>"; };
+		53DA811421A5DB3D00786084 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		53DA811521A5DB3D00786084 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				53DA810F21A5CD0500786084 /* Chicken.hpp */,
 				53DA811121A5D62900786084 /* Human.cpp */,
 				53DA811221A5D62900786084 /* Human.hpp */,
+				53DA811421A5DB3D00786084 /* Game.cpp */,
+				53DA811521A5DB3D00786084 /* Game.hpp */,
 			);
 			path = FriedChicken;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				53DA810821A4ABB300786084 /* main.cpp in Sources */,
 				53DA811021A5CD0500786084 /* Chicken.cpp in Sources */,
 				53DA811321A5D62900786084 /* Human.cpp in Sources */,
+				53DA811621A5DB3D00786084 /* Game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
