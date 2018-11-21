@@ -7,7 +7,6 @@ class Chicken{
     
 public:
     Chicken(Vector2u size);
-    ~Chicken();
     void Draw(RenderWindow &r);
     void Move(Event e);
     
