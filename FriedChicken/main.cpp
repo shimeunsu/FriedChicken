@@ -2,6 +2,8 @@
 #include <SFML/Graphics.hpp>
 #include "Chicken.hpp"
 #include "Chicken.cpp"
+#include "Human.hpp"
+#include "Human.cpp"
 
 using namespace std;
 using namespace sf;
@@ -10,12 +12,7 @@ int main() {
     // insert code here...
     RenderWindow r(VideoMode(640, 480), "test");
     Chicken chicken(r.getSize());
-    
-    
-    RectangleShape human;
-    human.setSize(Vector2f(60,120));
-    human.setFillColor(Color::Yellow);
-    human.setPosition(Vector2f(human.getPosition().x, r.getSize().y / 2 - human.getSize().y));
+    Human human(0,r.getSize().y / 2);
     
     while (r.isOpen()) {
         Event e;
@@ -33,21 +30,16 @@ int main() {
             
         }
         //update the game
-        human.move(0.2, 0.0);
-        if(human.getPosition().x > r.Window::getSize().x){
-            human.setPosition(Vector2f(-human.getSize().x, r.getSize().y / 2 - human.getSize().y));
-        }
-         
-        if(chicken.GetShape().getGlobalBounds().intersects(human.getGlobalBounds())){
+        human.Move(r.getSize());
+        
+        if(chicken.GetShape().getGlobalBounds().intersects(human.GetShape().getGlobalBounds())){
             r.close();
         }
         r.clear();
-        
-        r.draw(human);
-           chicken.Draw(r);
+        human.Draw(r);
+        chicken.Draw(r);
         //insert here
         r.display();
     }
-    std::cout << "Hello, World!\n";
-    return 0;
+  
 }
