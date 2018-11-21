@@ -1,19 +1,14 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "BaseObject.hpp"
+#include "BaseObject.cpp"
 using namespace sf;
 
-class Chicken{
+class Chicken : public BaseObject{
     
 public:
     Chicken(Vector2u size);
-    void Draw(RenderWindow &r);
     void Move(Event e);
-    
-    RectangleShape GetShape();
-
-private:
-    RectangleShape chicken;
-    
     
 };
