@@ -4,10 +4,7 @@
 using namespace sf;
 
 Chicken::Chicken(Vector2u size) {
-    Texture texture;
-    texture.loadFromFile("sprite/chicken.png");
-    sprite.setTexture(texture);
-    sprite.setPosition(Vector2f(sprite.getPosition().x, 0));
+
 }
 
 void Chicken::Move(Event e) {
