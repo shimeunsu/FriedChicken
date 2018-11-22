@@ -39,7 +39,7 @@ void Game::Loop(){
             r->clear();
         Texture texture;
         if (!texture.loadFromFile("sprite/chicken.png")){
-            std::cout<<"load failed"<<endl;
+            std::cout<<"load failed"<<std::endl;
             system("pause");
         }
         Sprite sprite;
