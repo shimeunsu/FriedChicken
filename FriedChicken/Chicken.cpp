@@ -30,4 +30,3 @@ void Chicken::Move(Event e){
         shape.setPosition(newPos);
     }
 }
-

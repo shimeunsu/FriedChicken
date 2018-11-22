@@ -14,7 +14,6 @@ class Game{
     
 public:
     Game();
-    
     void Loop();
     
 private:

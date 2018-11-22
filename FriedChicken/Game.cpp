@@ -3,7 +3,7 @@
 #include "Game.hpp"
 
 Game::Game(){
-    r = new RenderWindow(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE);
+    r = new RenderWindow(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE, Style::Fullscreen);
     chicken = new Chicken(r->getSize());
     human = new Human(r->getSize().x / 2, 0);
 
