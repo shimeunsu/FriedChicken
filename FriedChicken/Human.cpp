@@ -1,27 +1,28 @@
 #include "Human.hpp"
 
 Human::Human(float posX, float posY){
-    shape.setSize(Vector2f(HUMAN_SIZE_WIDTH,HUMAN_SIZE_HEIGHT));
-    shape.setFillColor(Color::Yellow);
-    shape.setPosition(Vector2f(posX,posY));
+    Texture texture;
+    texture.loadFromFile("sprite/human.png");
+    sprite.setTexture(texture);
+    sprite.setPosition(Vector2f(posX,posY));
 
     originalPosX = posX;
     originalPosY = posY;
 
 }
 
-void Human::Move(Vector2u size){
-    shape.move(0.0, HUMAN_MOVEMENT_SPEED);
-    if (shape.getPosition().x > size.x){
-        shape.setPosition(Vector2f(-shape.getSize().x, originalPosY));
+void Human::Move(Vector2u size) {
+    sprite.move(0, HUMAN_MOVEMENT_SPEED);
+    if (sprite.getPosition().x > size.x) {
+        sprite.setPosition(Vector2f(-HUMAN_SIZE_WIDTH, originalPosY));
     }
 
-    if (shape.getPosition().y >= WINDOW_HEIGHT - HUMAN_SIZE_HEIGHT){
-        shape.setPosition(Vector2f(shape.getPosition().x, 0));
+    if (sprite.getPosition().y >= WINDOW_HEIGHT - HUMAN_SIZE_HEIGHT) {
+        sprite.setPosition(Vector2f(sprite.getPosition().x, 0));
     }
 
-    if (shape.getPosition().y < 0){
-        shape.setPosition(Vector2f(shape.getPosition().x, WINDOW_HEIGHT));
+    if (sprite.getPosition().y < 0) {
+        sprite.setPosition(Vector2f(sprite.getPosition().x, WINDOW_HEIGHT));
     }
 
 }

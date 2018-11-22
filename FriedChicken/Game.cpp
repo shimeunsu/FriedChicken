@@ -33,12 +33,12 @@ void Game::Loop(){
             //update the game
             human->Move(r->getSize());
         }
-            if(chicken->GetShape().getGlobalBounds().intersects(human->GetShape().getGlobalBounds())){
+            if(chicken->getSprite().getGlobalBounds().intersects(human->getSprite().getGlobalBounds())){
                 r->close();
             }
             r->clear();
-            human->Draw(*r);
-            chicken->Draw(*r);
+            human->draw(r);
+            chicken->draw(r);
             //insert here
             r->display();
     }
