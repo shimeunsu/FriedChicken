@@ -11,7 +11,7 @@ Human::Human(float posX, float posY){
 }
 
 void Human::Move(Vector2u size){
-    shape.move(HUMAN_MOVEMENT_SPEED, 0.0);
+    shape.move(0.0, HUMAN_MOVEMENT_SPEED);
     if (shape.getPosition().x > size.x){
         shape.setPosition(Vector2f(-shape.getSize().x, originalPosY));
     }
