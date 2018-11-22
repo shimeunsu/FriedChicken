@@ -1,9 +1,9 @@
 #include "Human.hpp"
 
 Human::Human(float posX, float posY){
-    Texture texture;
-    texture.loadFromFile("sprite/human.png");
-    sprite.setTexture(texture);
+    Texture texture* = new Texture();
+    texture->loadFromFile("sprite/human.png");
+    sprite.setTexture(*texture);
     sprite.setPosition(Vector2f(posX,posY));
 
     originalPosX = posX;
