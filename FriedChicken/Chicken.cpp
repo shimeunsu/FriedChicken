@@ -10,24 +10,26 @@ Chicken::Chicken(Vector2u size){
 
 void Chicken::Move(Event e){
     if(Keyboard::Key::Right == e.key.code){
-        if(shape.getPosition().x <= 1920 - CHICKEN_SIZE_WIDTH || shape.getPosition().x >= 0 - CHICKEN_SIZE_WIDTH ){
+        if(shape.getPosition().x <= 1920 - CHICKEN_SIZE_WIDTH && shape.getPosition().x >= 0 - CHICKEN_SIZE_WIDTH ){
         shape.move(CHICKEN_MOVEMENT_AMOUNT,0);
         }
     }
     else if(Keyboard::Key::Left == e.key.code){
-         if(shape.getPosition().x <= 1920 - CHICKEN_SIZE_WIDTH || shape.getPosition().x >= 0 - CHICKEN_SIZE_WIDTH ){
+         if(shape.getPosition().x <= 1920 - CHICKEN_SIZE_WIDTH && shape.getPosition().x >= 0 - CHICKEN_SIZE_WIDTH ){
         shape.move(-CHICKEN_MOVEMENT_AMOUNT,0);
          }
     }
     else if(Keyboard::Key::Up == e.key.code){
-         if(shape.getPosition().x <= 1080 - CHICKEN_SIZE_WIDTH || shape.getPosition().x >= 0 - CHICKEN_SIZE_WIDTH ){
+         if(shape.getPosition().x <= 1080 - CHICKEN_SIZE_WIDTH && shape.getPosition().x >= 0 - CHICKEN_SIZE_WIDTH ){
         shape.move(0,-CHICKEN_MOVEMENT_AMOUNT);
          }
     }
     else if(Keyboard::Key::Down == e.key.code){
-         if(shape.getPosition().x <= 1080 - CHICKEN_SIZE_WIDTH || shape.getPosition().x >= 0 - CHICKEN_SIZE_WIDTH ){
+         if(shape.getPosition().x <= 1080 - CHICKEN_SIZE_WIDTH && shape.getPosition().x >= 0 - CHICKEN_SIZE_WIDTH ){
         shape.move(0,CHICKEN_MOVEMENT_AMOUNT);
     }
     }
+    
+    
 }
 
