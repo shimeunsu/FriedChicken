@@ -37,15 +37,7 @@ void Game::Loop(){
                 r->close();
             }
             r->clear();
-        Texture texture;
-        if (!texture.loadFromFile("sprite/chicken.png")){
-            std::cout<<"load failed"<<std::endl;
-            system("pause");
-        }
-        Sprite sprite;
-        sprite.setTexture(texture);
-        sprite.setPosition(Vector2f(sprite.getPosition().x, 0));
-        r->draw(sprite);
+            r->draw(chicken.getSprite());
             human->draw(r);
             chicken->draw(r);
             //insert here
