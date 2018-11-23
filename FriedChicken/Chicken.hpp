@@ -12,5 +12,4 @@ class Chicken : public BaseObject{
 public:
     Chicken(Vector2u size);
     void Move(Event e);
-    Sprite getSprite();
 };
