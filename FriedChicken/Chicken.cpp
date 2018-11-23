@@ -3,6 +3,8 @@
 #include "Chicken.hpp"
 using namespace sf;
 
+Sprite sprite;
+
 Chicken::Chicken(Vector2u size) {
     Texture texture;
     if (!texture.loadFromFile("sprite/chicken.png")){
@@ -38,6 +40,3 @@ void Chicken::Move(Event e) {
     }
 }
 
-Sprite Chicken::getSprite() {
-    return sprite;
-}
