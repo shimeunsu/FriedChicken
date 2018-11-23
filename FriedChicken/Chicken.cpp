@@ -7,6 +7,7 @@ Sprite sprite;
 
 Chicken::Chicken(Vector2u size) {
     Texture texture;
+            std::cout<<"hellochicken"<<std::endl;
     if (!texture.loadFromFile("sprite/chicken.png")){
         std::cout<<"load failed"<<std::endl;
         system("pause");
