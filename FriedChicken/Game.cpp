@@ -37,7 +37,7 @@ void Game::Loop(){
                 r->close();
             }
             r->clear();
-            r->draw(sprite);
+//            r->draw(sprite);
             human->draw(r);
             chicken->draw(r);
             //insert here
