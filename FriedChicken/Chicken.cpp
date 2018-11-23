@@ -8,14 +8,14 @@ using namespace sf;
 Chicken::Chicken(Vector2u size) {
     
     
-//    Texture texture;
-//    if (!texture.loadFromFile("sprite/chicken.png")){
-//        std::cout<<"load failed"<<std::endl;
-//        system("pause");
-//    }
-//    Sprite sprite;
-//    sprite.setTexture(texture);
-//    sprite.setPosition(Vector2f(sprite.getPosition().x, 0));
+    Texture texture;
+    if (!texture.loadFromFile("sprite/chicken.png")){
+        std::cout<<"load failed"<<std::endl;
+        system("pause");
+    }
+    Sprite sprite;
+    sprite.setTexture(texture);
+    sprite.setPosition(Vector2f(sprite.getPosition().x, 0));
 
 }
 
