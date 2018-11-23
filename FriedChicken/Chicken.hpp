@@ -1,3 +1,4 @@
+
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <iostream>
@@ -8,8 +9,8 @@ using namespace sf;
 
 class Chicken : public BaseObject{
     
-
 public:
     Chicken(Vector2u size);
     void Move(Event e);
+    
 };

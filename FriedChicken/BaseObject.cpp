@@ -3,11 +3,11 @@
 using namespace sf;
 
 BaseObject::BaseObject(){
-
+    
 }
-void BaseObject::draw(RenderWindow* r){
-    r->draw(sprite);
+void BaseObject::Draw(RenderWindow &r){
+    r.draw(shape);
 }
-Sprite BaseObject::getSprite(){
-    return sprite;
+RectangleShape BaseObject::GetShape(){
+    return shape;
 }
