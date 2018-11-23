@@ -4,8 +4,6 @@ Game::Game() {
     r = new RenderWindow(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE);
     chicken = new Chicken(r->getSize());
     human = new Human(r->getSize().x / 2, 0);
-
-
 }
 
 void Game::Loop(){
@@ -38,10 +36,9 @@ void Game::Loop(){
                 r->close();
             }
             r->clear();
-            r->draw(sprite);
-            //sprite->draw(r);
+            sprite->draw(r);
             human->draw(r);
-            chicken->draw(r);
+  //          chicken->draw(r);
             //insert here
             r->display();
     }
