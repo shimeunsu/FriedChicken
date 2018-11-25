@@ -42,10 +42,26 @@ void Game::Loop(){
             human4->Move(r->getSize());
             human5->Move(r->getSize());
         }
-        r->Hit(*human1);
+      
         if(chicken->GetShape().getGlobalBounds().intersects(human->GetShape().getGlobalBounds())){
             r->close();
         }
+        if(chicken->GetShape().getGlobalBounds().intersects(human1->GetShape().getGlobalBounds())){
+            r->close();
+        }
+        if(chicken->GetShape().getGlobalBounds().intersects(human2->GetShape().getGlobalBounds())){
+            r->close();
+        }
+        if(chicken->GetShape().getGlobalBounds().intersects(human3->GetShape().getGlobalBounds())){
+            r->close();
+        }
+        if(chicken->GetShape().getGlobalBounds().intersects(human4->GetShape().getGlobalBounds())){
+            r->close();
+        }
+        if(chicken->GetShape().getGlobalBounds().intersects(human5->GetShape().getGlobalBounds())){
+            r->close();
+        }
+        
         r->clear();
         human->Draw(*r);
         human1->Draw(*r);
@@ -61,10 +77,4 @@ void Game::Loop(){
     
 }
 
-void Game::Hit(Human &enemy){
-    
-    if(chicken->GetShape().getGlobalBounds().intersects(enemy.GetShape().getGlobalBounds())){
-        r->close();
-    }
-    
-}
+
