@@ -14,6 +14,7 @@ class Game{
 public:
     Game();
     void Loop();
+    void Hit(Human &enemy);
     
 private:
     RenderWindow *r;
