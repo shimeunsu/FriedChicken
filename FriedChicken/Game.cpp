@@ -42,7 +42,7 @@ void Game::Loop(){
             human4->Move(r->getSize());
             human5->Move(r->getSize());
         }
-        r->Hit(human)
+        r->Hit(*human1);
         if(chicken->GetShape().getGlobalBounds().intersects(human->GetShape().getGlobalBounds())){
             r->close();
         }
@@ -63,7 +63,7 @@ void Game::Loop(){
 
 void Game::Hit(Human &enemy){
     
-    if(chicken->GetShape().getGlobalBounds().intersects(enemy->GetShape().getGlobalBounds())){
+    if(chicken->GetShape().getGlobalBounds().intersects(enemy.GetShape().getGlobalBounds())){
         r->close();
     }
     
