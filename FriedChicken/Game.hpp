@@ -19,4 +19,9 @@ private:
     RenderWindow *r;
     Chicken *chicken;
     Human *human;
+    Human *human1;
+    Human *human2;
+    Human *human3;
+    Human *human4;
+    Human *human5;
 };
