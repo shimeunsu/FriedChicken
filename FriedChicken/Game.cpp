@@ -51,9 +51,9 @@ void Game::Loop(){
 
         }
       
-        if(chicken->GetShape().getGlobalBounds().intersects(human->GetShape().getGlobalBounds())){
-            r->close();
-        }
+//        if(chicken->GetShape().getGlobalBounds().intersects(human->GetShape().getGlobalBounds())){
+//            r->close();
+//        }
         
         for (int i =0; i <30 ; ++i){
             
