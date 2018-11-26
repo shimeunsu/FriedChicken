@@ -6,9 +6,9 @@ using namespace sf;
 class BaseObject{
 public:
     BaseObject();
-    void Draw(sf::RenderWindow &r);
-    sf::Sprite GetShape();
+    void Draw(RenderWindow &r);
+    RectangleShape GetShape();
 protected:
-    sf::Sprite shape;
+    RectangleShape shape;
     
 };
