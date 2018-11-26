@@ -9,14 +9,18 @@ void Game::initHumans(){
     Texture human1;
     if(!human1.loadFromFile("sprite/human.png"))
         std::cout << "Failed to load human Sprite" << std::endl;
-    for (int i =0; i <4 ; ++i){
-        
-        humans[i].setTexture(human1);
-       // humans[i].scale(2,2);
-        humans[i].setPosition(0 + (i*40),100);
-        r->draw(humans[i]);
-    }
+   human = new Human(r->getSize().x / 2, 0);
+    human.setTexture(human1);
+    r->draw(human);
     
+//    for (int i =0; i <4 ; ++i){
+//
+//        humans[i].setTexture(human1);
+//        humans[i].scale(2,2);
+//        humans[i].setPosition(0 + (i*40),100);
+//        r->draw(humans[i]);
+//    }
+//    
     
     
     
