@@ -19,7 +19,7 @@ public:
 private:
     RenderWindow *r;
     Chicken *chicken;
-    Human *human;
+    Sprite *human;
     Human *human1;
     Human *human2;
     Human *human3;
