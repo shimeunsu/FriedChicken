@@ -20,7 +20,7 @@ void Game::initHumans(){
 //    }
 
     
-    humans[0] = human = new Human(r->getSize().x / 3, 0);
+    humans[0] = new Human(r->getSize().x / 3, 0);
     
     human = new Human(r->getSize().x / 2, 0);
     human1 = new Human(r->getSize().x / 5, 0);
@@ -54,6 +54,7 @@ void Game::Loop(){
             
             
             //update the game
+            humans[0].Move(r->getSize());
             human->Move(r->getSize());
             human1->Move(r->getSize());
             human2->Move(r->getSize());
@@ -82,7 +83,7 @@ void Game::Loop(){
         }
         
         r->clear();
-        huamns[0].Draw(*r);
+        humans[0].Draw(*r);
         human->Draw(*r);
         human1->Draw(*r);
         human2->Draw(*r);
