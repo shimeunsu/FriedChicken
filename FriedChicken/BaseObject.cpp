@@ -8,6 +8,6 @@ BaseObject::BaseObject(){
 void BaseObject::Draw(RenderWindow &r){
     r.draw(shape);
 }
-RectangleShape BaseObject::GetShape(){
+Sprite BaseObject::GetShape(){
     return shape;
 }

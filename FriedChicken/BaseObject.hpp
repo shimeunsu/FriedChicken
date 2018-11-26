@@ -1,14 +1,14 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <iostream>
-using namespace sf;
+//using namespace sf;
 
 class BaseObject{
 public:
     BaseObject();
     void Draw(RenderWindow &r);
-    RectangleShape GetShape();
+    sf::Sprite GetShape();
 protected:
-    RectangleShape shape;
+    sf::Sprite shape;
     
 };
