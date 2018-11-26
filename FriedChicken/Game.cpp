@@ -13,21 +13,21 @@ void Game::initHumans(){
 //    human->setTexture(human1);
 //    r->Draw(human);
     
-    for (int i =0; i <4 ; ++i){
+//    for (int i =0; i <4 ; ++i){
+//
+//        humans[i] = new Human(500/(i +1),0 );
+//
+//    }
 
-        humans[i] = new Human(500/(i +1),0 );
-     
-    }
-
     
     
     
-//    human = new Human(r->getSize().x / 2, 0);
-//    human1 = new Human(r->getSize().x / 5, 0);
-//    human2 = new Human(r->getSize().x / 7, 0);
-//    human3 = new Human(r->getSize().x / 3, 0);
-//    human4 = new Human(r->getSize().x / 4, 0);
-//    human5 = new Human(r->getSize().x / 10, 0);
+    human = new Human(r->getSize().x / 2, 0);
+    human1 = new Human(r->getSize().x / 5, 0);
+    human2 = new Human(r->getSize().x / 7, 0);
+    human3 = new Human(r->getSize().x / 3, 0);
+    human4 = new Human(r->getSize().x / 4, 0);
+    human5 = new Human(r->getSize().x / 10, 0);
     
 }
 void Game::Loop(){
@@ -82,12 +82,12 @@ void Game::Loop(){
         }
         
         r->clear();
-        humans[0]->Draw(*r);
-        humans[1]->Draw(*r);
-//        human2->Draw(*r);
-//        human3->Draw(*r);
-//        human4->Draw(*r);
-//        human5->Draw(*r);
+        human->Draw(*r);
+        human1->Draw(*r);
+        human2->Draw(*r);
+        human3->Draw(*r);
+        human4->Draw(*r);
+        human5->Draw(*r);
         
         chicken->Draw(*r);
         //insert here
