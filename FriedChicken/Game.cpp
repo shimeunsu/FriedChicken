@@ -6,9 +6,10 @@ Game::Game() {
     initHumans();
 }
 void Game::initHumans(){
-//    Texture human1;
-//    if(!human1.loadFromFile("sprite/human.png"))
-//        std::cout << "Failed to load human Sprite" << std::endl;
+    Texture human1;
+    if(!human1.loadFromFile("sprite/human.png"))
+        std::cout << "Failed to load human Sprite" << std::endl;
+    
 //   human = new Human(r->getSize().x / 2, 0);
 //    human->setTexture(human1);
 //    r->Draw(human);
@@ -21,8 +22,10 @@ void Game::initHumans(){
 
     
     humans[0] = new Human(r->getSize().x / 3, 0);
-    
     human = new Human(r->getSize().x / 2, 0);
+    human->Sprite::setTexture(human1);
+    r->Draw(human);
+    
 //    human1 = new Human(r->getSize().x / 5, 0);
 //    human2 = new Human(r->getSize().x / 7, 0);
 //    human3 = new Human(r->getSize().x / 3, 0);
