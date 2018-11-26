@@ -13,9 +13,9 @@ void Game::initHumans(){
 //    human->setTexture(human1);
 //    r->Draw(human);
     
-    for (int i =0; i <4 ; ++i){
+    for (int i =0; i <30 ; ++i){
 
-        humans[i] = new Human(500,0 );
+        humans[i] = new Human( (i+1)*100,0 );
 
     }
 
@@ -53,7 +53,14 @@ void Game::Loop(){
             
             
             //update the game
-            humans[0]->Move(r->getSize());
+            for (int i =0; i <30 ; ++i){
+                
+                humans[i]->Move(r->getSize());
+                
+            }
+
+        
+            //humans[0]->Move(r->getSize());
             human->Move(r->getSize());
 //            human1->Move(r->getSize());
 //            human2->Move(r->getSize());
@@ -65,6 +72,16 @@ void Game::Loop(){
         if(chicken->GetShape().getGlobalBounds().intersects(human->GetShape().getGlobalBounds())){
             r->close();
         }
+        
+        for (int i =0; i <30 ; ++i){
+            
+            if(chicken->GetShape().getGlobalBounds().intersects(humans[i]->GetShape().getGlobalBounds())){
+                        r->close();
+                    }
+            
+        }
+
+        
 //        if(chicken->GetShape().getGlobalBounds().intersects(human1->GetShape().getGlobalBounds())){
 //            r->close();
 //        }
@@ -82,7 +99,13 @@ void Game::Loop(){
 //        }
         
         r->clear();
-        humans[0]->Draw(*r);
+        
+        for (int i =0; i <30 ; ++i){
+            
+          humans[i]->Draw(*r);
+            
+        }
+        //humans[0]->Draw(*r);
         human->Draw(*r);
 //        human1->Draw(*r);
 //        human2->Draw(*r);
