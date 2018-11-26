@@ -45,7 +45,7 @@ void Game::Loop(){
             //update the game
             for (int i =0; i <30 ; ++i){
                 
-                humans[i]->Move(r->getSize());
+                humans[i]->MoveDown(r->getSize());
                 
             }
 
