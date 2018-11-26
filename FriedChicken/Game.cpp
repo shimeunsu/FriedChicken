@@ -10,8 +10,8 @@ void Game::initHumans(){
     if(!human1.loadFromFile("sprite/human.png"))
         std::cout << "Failed to load human Sprite" << std::endl;
    human = new Human(r->getSize().x / 2, 0);
-    human.setTexture(human1);
-    r->draw(human);
+    human->setTexture(human1);
+    r->Draw(human);
     
 //    for (int i =0; i <4 ; ++i){
 //
@@ -20,7 +20,7 @@ void Game::initHumans(){
 //        humans[i].setPosition(0 + (i*40),100);
 //        r->draw(humans[i]);
 //    }
-//    
+//
     
     
     
