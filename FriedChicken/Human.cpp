@@ -32,8 +32,8 @@ void Human::MoveUp(Vector2u size){
         shape.setPosition(Vector2f(-shape.getSize().x, originalPosY));
     }
     
-    if (shape.getPosition().y >= WINDOW_HEIGHT - HUMAN_SIZE_HEIGHT){
-        shape.setPosition(Vector2f(shape.getPosition().x, 1080));
+    if (shape.getPosition().y >= WINDOW_HEIGHT + HUMAN_SIZE_HEIGHT){
+        shape.setPosition(Vector2f(shape.getPosition().x, 0));
     }
     
     if (shape.getPosition().y < 0){
