@@ -12,8 +12,8 @@ void Game::initHumans(){
     for (int i =0; i <4 ; ++i){
         
         humans[i].setTexture(human1);
-        humans[i].scale(2,2);
-        humans[i].setPosition(50 + (i*40),300);
+       // humans[i].scale(2,2);
+        humans[i].setPosition(0 + (i*40),100);
         r->draw(humans[i]);
     }
     
