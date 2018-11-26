@@ -13,7 +13,7 @@ void Game::initHumans(){
         
         humans[i].setTexture(human1);
         humans[i].scale(2,2);
-        humans[i].setPosition(50 + (i*140),300);
+        humans[i].setPosition(50 + (i*40),300);
         r->draw(humans[i]);
     }
     
