@@ -3,14 +3,18 @@
 Game::Game() {
     r = new RenderWindow(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE);
     chicken = new Chicken(r->getSize());
+    initHumans();
+}
+void Game::initHumans(){
+    
     human = new Human(r->getSize().x / 2, 0);
     human1 = new Human(r->getSize().x / 5, 0);
     human2 = new Human(r->getSize().x / 7, 0);
     human3 = new Human(r->getSize().x / 3, 0);
     human4 = new Human(r->getSize().x / 4, 0);
     human5 = new Human(r->getSize().x / 10, 0);
+    
 }
-
 void Game::Loop(){
     Clock* clock = new Clock();
     while (r->isOpen()) {
