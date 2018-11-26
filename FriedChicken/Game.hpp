@@ -25,5 +25,5 @@ private:
     Human *human3;
     Human *human4;
     Human *human5;
-    Sprite humans[4];
+    Human humans[4];
 };
