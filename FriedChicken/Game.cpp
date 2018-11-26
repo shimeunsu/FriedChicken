@@ -15,7 +15,7 @@ void Game::initHumans(){
     
     for (int i =0; i <4 ; ++i){
 
-        humans[i] = new Human(r->getSize.x/(i +1),0 );
+        humans[i] = new Human(500/(i +1),0 );
      
     }
 
