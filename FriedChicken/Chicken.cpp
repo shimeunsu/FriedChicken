@@ -5,9 +5,9 @@ using namespace sf;
 
 Chicken::Chicken(Vector2u size){
     shape.setSize(Vector2f(CHICKEN_SIZE_WIDTH,CHICKEN_SIZE_HEIGHT));
-    Texture* texture = new Texture();
-    texture->loadFromFile("sprite/chicken.png");
-    shape->setTexture(*texture);
+//    Texture* texture = new Texture();
+//    texture->loadFromFile("sprite/chicken.png");
+//    shape->setTexture(*texture);
     shape.setPosition(Vector2f(shape.getPosition().x,WINDOW_HEIGHT / 2));
 }
 
