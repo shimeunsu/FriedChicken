@@ -66,21 +66,21 @@ void Game::Loop(){
         if(chicken->GetShape().getGlobalBounds().intersects(human->GetShape().getGlobalBounds())){
             r->close();
         }
-        if(chicken->GetShape().getGlobalBounds().intersects(human1->GetShape().getGlobalBounds())){
-            r->close();
-        }
-        if(chicken->GetShape().getGlobalBounds().intersects(human2->GetShape().getGlobalBounds())){
-            r->close();
-        }
-        if(chicken->GetShape().getGlobalBounds().intersects(human3->GetShape().getGlobalBounds())){
-            r->close();
-        }
-        if(chicken->GetShape().getGlobalBounds().intersects(human4->GetShape().getGlobalBounds())){
-            r->close();
-        }
-        if(chicken->GetShape().getGlobalBounds().intersects(human5->GetShape().getGlobalBounds())){
-            r->close();
-        }
+//        if(chicken->GetShape().getGlobalBounds().intersects(human1->GetShape().getGlobalBounds())){
+//            r->close();
+//        }
+//        if(chicken->GetShape().getGlobalBounds().intersects(human2->GetShape().getGlobalBounds())){
+//            r->close();
+//        }
+//        if(chicken->GetShape().getGlobalBounds().intersects(human3->GetShape().getGlobalBounds())){
+//            r->close();
+//        }
+//        if(chicken->GetShape().getGlobalBounds().intersects(human4->GetShape().getGlobalBounds())){
+//            r->close();
+//        }
+//        if(chicken->GetShape().getGlobalBounds().intersects(human5->GetShape().getGlobalBounds())){
+//            r->close();
+//        }
         
         r->clear();
         humans[0]->Draw(*r);
