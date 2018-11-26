@@ -43,16 +43,16 @@ void Game::Loop(){
             
             
             //update the game
-            for (int i =0; i <30 ; i*2){
+            for (int i =0; i <30 ;){
                 
                 humans[i]->MoveDown(r->getSize());
-                
+                i = i + 2;
             }
             
-            for (int i =1; i <30 ; i*2){
+            for (int i =1; i <30 ;){
                 
                 humans[i]->MoveUp(r->getSize());
-                
+                i = i + 2;
             }
 
 
