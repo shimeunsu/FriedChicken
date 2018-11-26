@@ -54,7 +54,7 @@ void Game::Loop(){
             
             
             //update the game
-            humans[0].Move(r->getSize());
+            humans[0]->Move(r->getSize());
             human->Move(r->getSize());
             human1->Move(r->getSize());
             human2->Move(r->getSize());
@@ -83,7 +83,7 @@ void Game::Loop(){
         }
         
         r->clear();
-        humans[0].Draw(*r);
+        humans[0]->Draw(*r);
         human->Draw(*r);
         human1->Draw(*r);
         human2->Draw(*r);
