@@ -9,23 +9,23 @@ void Game::initHumans(){
     Texture human1;
     if(!human1.loadFromFile("sprite/human.png"))
         std::cout << "Failed to load human Sprite" << std::endl;
-    for (init i =0; i <4 ; ++i){
+    for (int i =0; i <4 ; ++i){
         
         humans[i].setTexture(human1);
         humans[i].scale(2,2);
         humans[i].setPosition(50 + (i*140),300);
-        r->Draw(humans[i]);
+        r->draw(humans[i]);
     }
     
     
     
     
-    human = new Human(r->getSize().x / 2, 0);
-    human1 = new Human(r->getSize().x / 5, 0);
-    human2 = new Human(r->getSize().x / 7, 0);
-    human3 = new Human(r->getSize().x / 3, 0);
-    human4 = new Human(r->getSize().x / 4, 0);
-    human5 = new Human(r->getSize().x / 10, 0);
+//    human = new Human(r->getSize().x / 2, 0);
+//    human1 = new Human(r->getSize().x / 5, 0);
+//    human2 = new Human(r->getSize().x / 7, 0);
+//    human3 = new Human(r->getSize().x / 3, 0);
+//    human4 = new Human(r->getSize().x / 4, 0);
+//    human5 = new Human(r->getSize().x / 10, 0);
     
 }
 void Game::Loop(){
