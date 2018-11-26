@@ -6,21 +6,19 @@ Game::Game() {
     initHumans();
 }
 void Game::initHumans(){
-    Texture human1;
-    if(!human1.loadFromFile("sprite/human.png"))
-        std::cout << "Failed to load human Sprite" << std::endl;
-   human = new Human(r->getSize().x / 2, 0);
-    human->setTexture(human1);
-    r->Draw(human);
+//    Texture human1;
+//    if(!human1.loadFromFile("sprite/human.png"))
+//        std::cout << "Failed to load human Sprite" << std::endl;
+//   human = new Human(r->getSize().x / 2, 0);
+//    human->setTexture(human1);
+//    r->Draw(human);
     
-//    for (int i =0; i <4 ; ++i){
-//
-//        humans[i].setTexture(human1);
-//        humans[i].scale(2,2);
-//        humans[i].setPosition(0 + (i*40),100);
-//        r->draw(humans[i]);
-//    }
-//
+    for (int i =0; i <4 ; ++i){
+
+        humans[i] = new Human(r->getSize.x/(i +1),0 )
+     
+    }
+
     
     
     
@@ -84,12 +82,12 @@ void Game::Loop(){
         }
         
         r->clear();
-        human->Draw(*r);
-        human1->Draw(*r);
-        human2->Draw(*r);
-        human3->Draw(*r);
-        human4->Draw(*r);
-        human5->Draw(*r);
+        humans[0]->Draw(*r);
+        humans[1]->Draw(*r);
+//        human2->Draw(*r);
+//        human3->Draw(*r);
+//        human4->Draw(*r);
+//        human5->Draw(*r);
         
         chicken->Draw(*r);
         //insert here
