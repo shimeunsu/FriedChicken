@@ -96,7 +96,7 @@ void Game::reset() {
 }
 
 void Game::gameOver(RenderWindow* r, int score) {
-    r->clear();
+    r->clear(Color(222,184,135));
     Text gameOverMsg;
     Font f;
     f.loadFromFile(fontfile);
@@ -109,7 +109,6 @@ void Game::gameOver(RenderWindow* r, int score) {
     gameOverMsg.setPosition(10,10);
     r->draw(gameOverMsg);
     r->display();
-    //sleep(seconds(3));
     while(r->isOpen()) {
         Event e;
         while(r->pollEvent(e)) {
@@ -127,7 +126,7 @@ void Game::gameOver(RenderWindow* r, int score) {
 }
 
 void Game::gameWin(RenderWindow* r, int score) {
-    r->clear();
+    r->clear(Color(222,184,135));
     Text gameOverMsg;
     Font f;
     f.loadFromFile(fontfile);
