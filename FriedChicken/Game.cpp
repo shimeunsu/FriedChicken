@@ -58,7 +58,7 @@ void Game::Loop() {
         for (Human* human: humans) {
 
             if(chicken->GetShape()->getGlobalBounds().intersects(human->GetShape()->getGlobalBounds())){
-                gameOver(r,score);
+               // gameOver(r,score);
                         //r->close();
                     }
 
@@ -80,21 +80,21 @@ void Game::Loop() {
 }
 
 
-void Game::gameOver(RenderWindow* r, int score) {
-    r->clear();
-    Text gameOverMsg;
-    Font f;
-    f.loadFromFile(fontfile);
-    gameOverMsg.setFont(f);
-    stringstream msgText;
-    msgText << "Game Over!" << endl << "Score: " << score;
-    gameOverMsg.setString(msgText.str());
-    gameOverMsg.setCharacterSize(20);
-    gameOverMsg.setFillColor(Color::White);
-    gameOverMsg.setPosition(10,10);
-    r->draw(gameOverMsg);
-    r->display();
-    sleep(seconds(3));
-    r->close();
-    exit(0);
-}
+//void Game::gameOver(RenderWindow* r, int score) {
+//    r->clear();
+//    Text gameOverMsg;
+//    Font f;
+//    f.loadFromFile(fontfile);
+//    gameOverMsg.setFont(f);
+//    stringstream msgText;
+//    msgText << "Game Over!" << endl << "Score: " << score;
+//    gameOverMsg.setString(msgText.str());
+//    gameOverMsg.setCharacterSize(20);
+//    gameOverMsg.setFillColor(Color::White);
+//    gameOverMsg.setPosition(10,10);
+//    r->draw(gameOverMsg);
+//    r->display();
+//    sleep(seconds(3));
+//    r->close();
+//    exit(0);
+//}
