@@ -157,4 +157,4 @@ void Game::gameWin(RenderWindow* r, int score) {
     exit(0);
 }
     
-}
+
