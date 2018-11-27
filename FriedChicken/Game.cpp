@@ -62,7 +62,7 @@ void Game::Loop() {
         for (Human* human: humans) {
 
             if(chicken->GetShape()->getGlobalBounds().intersects(human->GetShape()->getGlobalBounds())){
-               // gameOver(r,score);
+                gameOver(r,score);
                         //r->close();
                     }
 
