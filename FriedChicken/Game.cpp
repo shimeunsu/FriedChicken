@@ -5,6 +5,7 @@ using namespace std;
 
 Game::Game() {
     gameClock = new Clock();
+    int score = 0;
     r = new RenderWindow(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE);
     chicken = new Chicken();
     initHumans();
@@ -20,6 +21,8 @@ void Game::Loop() {
     while (r->isOpen()) {
         Event e;
         if (gameClock->getElapsedTime() > seconds(.1)) {
+            score++;
+            cout<< score << endl;
             gameClock->restart();
             while (r->pollEvent(e)) {
                 switch(e.type) {
@@ -48,11 +51,15 @@ void Game::Loop() {
                 i++;
             }
         }
-
+        
+        if (chicken->getPosition().x < WINDOW_WIDTH){
+            //game win
+        }
         for (Human* human: humans) {
 
             if(chicken->GetShape()->getGlobalBounds().intersects(human->GetShape()->getGlobalBounds())){
-                        r->close();
+                gameOver();
+                        //r->close();
                     }
 
         }
@@ -70,4 +77,24 @@ void Game::Loop() {
 
     }
 
+}
+
+
+void Game::gameOver(RenderWindow* r, int score) {
+    window->clear();
+    Text gameOverMsg;
+    Font f;
+    f.loadFromFile(fontfile);
+    gameOverMsg.setFont(f);
+    stringstream msgText;
+    msgText << "Game Over!" << endl << "Score: " << score;
+    gameOverMsg.setString(msgText.str());
+    gameOverMsg.setCharacterSize(20);
+    gameOverMsg.setFillColor(Color::White);
+    gameOverMsg.setPosition(10,10);
+    window->draw(gameOverMsg);
+    window->display();
+    sleep(seconds(3));
+    window->close();
+    exit(0);
 }

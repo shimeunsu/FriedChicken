@@ -12,6 +12,7 @@ public:
     Game();
     void Loop();
     void initHumans();
+    void gameOver(RenderWindow* r, int score);
 
 private:
     sf::RenderWindow* r;
