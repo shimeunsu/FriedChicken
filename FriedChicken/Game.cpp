@@ -111,7 +111,7 @@ void Game::gameOver(RenderWindow* r, int score) {
                 r->close();
             }
             else if (e.key.code == Keyboard::R) {
-                game->Loop();
+                Loop();
             }
         }
     }
