@@ -5,7 +5,7 @@ using namespace std;
 
 Game::Game() {
     gameClock = new Clock();
-    score = 0;
+    score = 100;
     r = new RenderWindow(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE);
     chicken = new Chicken();
     initHumans();
@@ -21,7 +21,11 @@ void Game::Loop() {
     while (r->isOpen()) {
         Event e;
         if (gameClock->getElapsedTime() > seconds(.1)) {
-            score++;
+            score--;
+            
+            if(score == 0){
+                r->close();
+            }
             cout<< score << endl;
             gameClock->restart();
             while (r->pollEvent(e)) {
