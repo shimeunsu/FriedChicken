@@ -13,6 +13,7 @@ public:
     void Loop();
     void initHumans();
     void gameOver(sf::RenderWindow* r, int score);
+    void updateTitle(sf::Window* w, int score);
 
 private:
     sf::RenderWindow* r;

@@ -22,7 +22,7 @@ void Game::Loop() {
         Event e;
         if (gameClock->getElapsedTime() > seconds(.1)) {
             score--;
-            
+            updateTitle(r, score);
             if(score == 0){
                 r->close();
             }
@@ -81,6 +81,11 @@ void Game::Loop() {
 
 }
 
+void Game::updateTitle(Window* w, int score) {
+    stringstream ss;
+    ss << "Fried Chicken: " << score;
+    w->setTitle(ss.str());
+}
 
 //void Game::gameOver(RenderWindow* r, int score) {
 //    r->clear();
