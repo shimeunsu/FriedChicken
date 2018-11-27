@@ -4,14 +4,14 @@
 
 using namespace sf;
 
-Chicken::Chicken(Vector2u size) {
+Chicken::Chicken() {
     Texture* texture = new Texture();
     texture->loadFromFile("sprite/chicken.png");
-    shape->setTexture(*texture);
-    shape->setPosition(Vector2f(shape->getPosition().x,WINDOW_HEIGHT / 2));
+    shape = new Sprite(*texture);
+    shape->setPosition(0,WINDOW_HEIGHT / 2);
 }
 
-void Chicken::Move(Event e){
+void Chicken::Move(Event e) {
     Vector2f oldPos = shape->getPosition();
     Vector2f newPos;
     switch(e.key.code) {

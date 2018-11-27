@@ -8,7 +8,6 @@
 class Chicken : public BaseObject{
 
 public:
-    Chicken(sf::Vector2u size);
+    Chicken();
     void Move(sf::Event e);
-
 };

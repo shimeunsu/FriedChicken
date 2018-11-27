@@ -4,7 +4,7 @@
 #include "BaseObject.hpp"
 #include "DEFINITIONS.hpp"
 
-class Human:public BaseObject{
+class Human: public BaseObject{
 
 public:
     Human(float posX, float posY);

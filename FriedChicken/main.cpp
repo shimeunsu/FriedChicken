@@ -4,8 +4,7 @@ using namespace std;
 using namespace sf;
 
 int main() {
-
-    Game game;
-    game.Loop();
+    Game* game = new Game();
+    game->Loop();
     return EXIT_SUCCESS;
 }
