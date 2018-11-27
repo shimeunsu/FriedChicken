@@ -96,14 +96,23 @@ void Game::gameOver(RenderWindow* r, int score) {
     f.loadFromFile(fontfile);
     gameOverMsg.setFont(f);
     stringstream msgText;
-    msgText << "Game Over!" << endl << "Score: " << score;
+    msgText << "Game Over!" << endl << "Score: " << score << endl;
+    msgText << "Press Q to quit" << endl;
     gameOverMsg.setString(msgText.str());
     gameOverMsg.setCharacterSize(20);
     gameOverMsg.setFillColor(Color::White);
     gameOverMsg.setPosition(10,10);
     r->draw(gameOverMsg);
     r->display();
-    sleep(seconds(3));
+    //sleep(seconds(3));
+    while(r->isOpen()) {
+        Event e;
+        while(r->pollEvent(e)) {
+            if (e.key.code == Keyboard::Q) {
+                r->close();
+            }
+        }
+    }
     r->close();
     exit(0);
 }
