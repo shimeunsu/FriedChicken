@@ -1,5 +1,6 @@
 #include "Game.hpp"
 #include <sstream>
+#define fontfile "Hack-Regular.ttf"
 
 using namespace sf;
 using namespace std;
@@ -88,21 +89,21 @@ void Game::updateTitle(Window* w, int score) {
     w->setTitle(ss.str());
 }
 
-//void Game::gameOver(RenderWindow* r, int score) {
-//    r->clear();
-//    Text gameOverMsg;
-//    Font f;
-//    f.loadFromFile(fontfile);
-//    gameOverMsg.setFont(f);
-//    stringstream msgText;
-//    msgText << "Game Over!" << endl << "Score: " << score;
-//    gameOverMsg.setString(msgText.str());
-//    gameOverMsg.setCharacterSize(20);
-//    gameOverMsg.setFillColor(Color::White);
-//    gameOverMsg.setPosition(10,10);
-//    r->draw(gameOverMsg);
-//    r->display();
-//    sleep(seconds(3));
-//    r->close();
-//    exit(0);
-//}
+void Game::gameOver(RenderWindow* r, int score) {
+    r->clear();
+    Text gameOverMsg;
+    Font f;
+    f.loadFromFile(fontfile);
+    gameOverMsg.setFont(f);
+    stringstream msgText;
+    msgText << "Game Over!" << endl << "Score: " << score;
+    gameOverMsg.setString(msgText.str());
+    gameOverMsg.setCharacterSize(20);
+    gameOverMsg.setFillColor(Color::White);
+    gameOverMsg.setPosition(10,10);
+    r->draw(gameOverMsg);
+    r->display();
+    sleep(seconds(3));
+    r->close();
+    exit(0);
+}
