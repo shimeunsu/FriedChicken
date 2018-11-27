@@ -57,7 +57,7 @@ void Game::Loop() {
         }
         
   
-        if (chicken->GetShape().getPosition().x > WINDOW_WIDTH){
+        if (chicken->GetShape()->getPosition().x > WINDOW_WIDTH){
             gameWin();
         }
         for (Human* human: humans) {
