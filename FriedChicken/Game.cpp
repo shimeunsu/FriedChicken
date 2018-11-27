@@ -90,7 +90,7 @@ void Game::updateTitle(Window* w, int score) {
 }
 
 void Game::reset() {
-    chicken->setPosition(0, WINDOW_HEIGHT / 2);
+    chicken->GetShape()->setPosition(0, WINDOW_HEIGHT / 2);
 }
 
 void Game::gameOver(RenderWindow* r, int score) {
