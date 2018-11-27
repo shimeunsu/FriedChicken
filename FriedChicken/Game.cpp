@@ -81,7 +81,7 @@ void Game::Loop() {
 
 
 void Game::gameOver(RenderWindow* r, int score) {
-    window->clear();
+    r->clear();
     Text gameOverMsg;
     Font f;
     f.loadFromFile(fontfile);
@@ -92,9 +92,9 @@ void Game::gameOver(RenderWindow* r, int score) {
     gameOverMsg.setCharacterSize(20);
     gameOverMsg.setFillColor(Color::White);
     gameOverMsg.setPosition(10,10);
-    window->draw(gameOverMsg);
-    window->display();
+    r->draw(gameOverMsg);
+    r->display();
     sleep(seconds(3));
-    window->close();
+    r->close();
     exit(0);
 }
