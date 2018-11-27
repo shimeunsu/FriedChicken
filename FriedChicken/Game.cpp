@@ -1,4 +1,5 @@
 #include "Game.hpp"
+#include <sstream>
 
 using namespace sf;
 using namespace std;
