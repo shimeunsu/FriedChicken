@@ -14,7 +14,7 @@ public:
     void initHumans();
     void gameOver(sf::RenderWindow* r, int score);
     void updateTitle(sf::Window* w, int score);
-    void Game::reset();
+    void reset();
 
 private:
     sf::RenderWindow* r;
