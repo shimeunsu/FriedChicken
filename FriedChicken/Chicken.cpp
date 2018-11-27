@@ -1,18 +1,18 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Chicken.hpp"
+
 using namespace sf;
 
-Chicken::Chicken(Vector2u size){
-    shape.setSize(Vector2f(CHICKEN_SIZE_WIDTH,CHICKEN_SIZE_HEIGHT));
-//    Texture* texture = new Texture();
-//    texture->loadFromFile("sprite/chicken.png");
-//    shape->setTexture(*texture);
-    shape.setPosition(Vector2f(shape.getPosition().x,WINDOW_HEIGHT / 2));
+Chicken::Chicken(Vector2u size) {
+    Texture* texture = new Texture();
+    texture->loadFromFile("sprite/chicken.png");
+    shape->setTexture(*texture);
+    shape->setPosition(Vector2f(shape->getPosition().x,WINDOW_HEIGHT / 2));
 }
 
 void Chicken::Move(Event e){
-    Vector2f oldPos = shape.getPosition();
+    Vector2f oldPos = shape->getPosition();
     Vector2f newPos;
     switch(e.key.code) {
         case Keyboard::Up:
@@ -30,6 +30,6 @@ void Chicken::Move(Event e){
     }
     if (!(newPos.x > WINDOW_WIDTH  - CHICKEN_SIZE_WIDTH || newPos.x < 0
           || newPos.y > WINDOW_HEIGHT - CHICKEN_SIZE_HEIGHT || newPos.y < 0)) {
-        shape.setPosition(newPos);
+        shape->setPosition(newPos);
     }
 }

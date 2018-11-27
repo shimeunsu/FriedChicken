@@ -3,17 +3,14 @@
 #include <iostream>
 #include "BaseObject.hpp"
 #include "DEFINITIONS.hpp"
-using namespace sf;
 
 class Human:public BaseObject{
-    
+
 public:
     Human(float posX, float posY);
-    void MoveDown(Vector2u size);
-    void MoveUp(Vector2u size);
-    
+    void MoveDown(sf::Vector2u size);
+    void MoveUp(sf::Vector2u size);
+
 private:
     float originalPosX, originalPosY;
-    
-    
 };

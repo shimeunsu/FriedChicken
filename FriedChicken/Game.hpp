@@ -1,29 +1,21 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <vector>
 #include "Chicken.hpp"
-#include "Chicken.cpp"
 #include "Human.hpp"
-#include "Human.cpp"
 #include "DEFINITIONS.hpp"
 
-using namespace sf;
-
 class Game{
-    
+
 public:
     Game();
     void Loop();
     void initHumans();
-    
+
 private:
-    RenderWindow *r;
-    Chicken *chicken;
-// Human *human;
-//    Human *human1;
-//    Human *human2;
-//    Human *human3;
-//    Human *human4;
-//    Human *human5;
-    Human *humans[30];
+    sf::RenderWindow* r;
+    Chicken* chicken;
+
+    std::vector<Human*> humans;
 };
