@@ -89,6 +89,10 @@ void Game::updateTitle(Window* w, int score) {
     w->setTitle(ss.str());
 }
 
+void Game::reset() {
+    chicken->setPosition(0, WINDOW_HEIGHT / 2);
+}
+
 void Game::gameOver(RenderWindow* r, int score) {
     r->clear();
     Text gameOverMsg;
@@ -111,6 +115,7 @@ void Game::gameOver(RenderWindow* r, int score) {
                 r->close();
             }
             else if (e.key.code == Keyboard::R) {
+                reset();
                 Loop();
             }
         }
