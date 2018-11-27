@@ -7,7 +7,7 @@ using namespace std;
 
 Game::Game() {
     gameClock = new Clock();
-    score = 100;
+    score = MAX_SCORE;
     r = new RenderWindow(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE);
     chicken = new Chicken();
     initHumans();
@@ -85,12 +85,13 @@ void Game::Loop() {
 
 void Game::updateTitle(Window* w, int score) {
     stringstream ss;
-    ss << "Fried Chicken: " << score;
+    ss << WINDOW_TITLE << ": " << score;
     w->setTitle(ss.str());
 }
 
 void Game::reset() {
     chicken->GetShape()->setPosition(0, WINDOW_HEIGHT / 2);
+    score = MAX_SCORE;
 }
 
 void Game::gameOver(RenderWindow* r, int score) {
