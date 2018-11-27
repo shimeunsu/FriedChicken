@@ -28,7 +28,6 @@ void Game::Loop() {
             if(score == 0){
                 r->close();
             }
-            cout<< score << endl;
             gameClock->restart();
             while (r->pollEvent(e)) {
                 switch(e.type) {
@@ -45,7 +44,6 @@ void Game::Loop() {
                 }
             }
 
-
             //update the game
             int i = 0;
             for (Human* human: humans) {
@@ -59,6 +57,9 @@ void Game::Loop() {
         }
         
   
+        if (chicken->GetShape().getPosition().x > WINDOW_WIDTH){
+            gameWin();
+        }
         for (Human* human: humans) {
 
             if(chicken->GetShape()->getGlobalBounds().intersects(human->GetShape()->getGlobalBounds())){
@@ -123,4 +124,37 @@ void Game::gameOver(RenderWindow* r, int score) {
     }
     r->close();
     exit(0);
+}
+
+void Game::gameWin(RenderWindow* r, int score) {
+    r->clear();
+    Text gameOverMsg;
+    Font f;
+    f.loadFromFile(fontfile);
+    gameOverMsg.setFont(f);
+    stringstream msgText;
+    msgText << "You WON!" << endl << "Score: " << score << endl << "Press Q to quit" << endl << "Press R to retry" << endl;
+    gameOverMsg.setString(msgText.str());
+    gameOverMsg.setCharacterSize(20);
+    gameOverMsg.setFillColor(Color::White);
+    gameOverMsg.setPosition(10,10);
+    r->draw(gameOverMsg);
+    r->display();
+    //sleep(seconds(3));
+    while(r->isOpen()) {
+        Event e;
+        while(r->pollEvent(e)) {
+            if (e.key.code == Keyboard::Q) {
+                r->close();
+            }
+            else if (e.key.code == Keyboard::R) {
+                reset();
+                Loop();
+            }
+        }
+    }
+    r->close();
+    exit(0);
+}
+    
 }
