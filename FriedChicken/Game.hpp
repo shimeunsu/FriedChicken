@@ -18,6 +18,7 @@ private:
     sf::RenderWindow* r;
     Chicken* chicken;
     sf::Clock* gameClock;
+    int score;
 
     std::vector<Human*> humans;
 };

@@ -5,7 +5,7 @@ using namespace std;
 
 Game::Game() {
     gameClock = new Clock();
-    int score = 0;
+    score = 0;
     r = new RenderWindow(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE);
     chicken = new Chicken();
     initHumans();
