@@ -69,7 +69,7 @@ void Game::Loop() {
 
         }
 
-        r->clear();
+        r->clear(Color::Red);
 
         for (Human* human: humans){
           r->draw(*human->GetShape());
