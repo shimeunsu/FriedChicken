@@ -52,9 +52,7 @@ void Game::Loop() {
             }
         }
         
-        if (chicken->getPosition().x < WINDOW_WIDTH){
-            //game win
-        }
+  
         for (Human* human: humans) {
 
             if(chicken->GetShape()->getGlobalBounds().intersects(human->GetShape()->getGlobalBounds())){
