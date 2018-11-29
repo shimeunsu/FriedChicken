@@ -26,6 +26,9 @@ Game::Game() {
 void Game::initHumans() {
     for (int i = 0; i < (WINDOW_WIDTH / (HUMAN_SIZE_WIDTH * 5)) + 1; ++i) {
         Human* human = new Human((i+1)*100,0);
+        if (i % 2 == 0) {
+            Human* human = new Human((i+1)*100, WINDOW_HEIGHT/2);
+        }
         humans.push_back(human);
         human->GetShape()->setPosition((i+1)*100,0);
     }
