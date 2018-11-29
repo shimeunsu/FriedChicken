@@ -18,7 +18,7 @@ Human::Human(float posX, float posY) {
  \brief "Move the human down"
  \param "The size of the window"
  */
-void Human::MoveDown(Vector2u size, speed) {
+void Human::MoveDown(Vector2u size, float speed) {
     shape->move(0.0, speed);
     if (shape->getPosition().x > size.x){
         shape->setPosition(Vector2f(-shape->getTexture()->getSize().x, originalPosY));
