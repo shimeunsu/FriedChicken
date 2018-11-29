@@ -15,8 +15,8 @@ Human::Human(float posX, float posY) {
 }
 
 /*!
- \brief "Move the human down or up"
- \param "The size of the window and speed"
+ \brief "Move the human down"
+ \param "The size of the window"
  */
 void Human::Move(Vector2u size, float speed) {
     shape->move(0.0, speed);
