@@ -17,7 +17,7 @@ public:
      \brief "Move the human down"
      \param "The size of the window"
      */
-    void MoveDown(sf::Vector2u size);
+    void MoveDown(sf::Vector2u size, float speed);
     
     /*!
      \brief "Move the human up"
