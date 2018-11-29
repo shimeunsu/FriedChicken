@@ -14,16 +14,12 @@ public:
     Human(float posX, float posY);
     
     /*!
-     \brief "Move the human down"
-     \param "The size of the window"
+     \brief "Move the human down or up"
+     \param "The size of the window and takes speed"
      */
-    void MoveDown(sf::Vector2u size, float speed);
+    void Move(sf::Vector2u size, float speed);
     
-    /*!
-     \brief "Move the human up"
-     \param "The size of the window"
-     */
-    void MoveUp(sf::Vector2u size);
+ 
 
 private:
     float originalPosX, originalPosY;
