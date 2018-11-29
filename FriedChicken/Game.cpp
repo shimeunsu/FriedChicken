@@ -1,6 +1,7 @@
 #include "Game.hpp"
 #include <sstream>
 #define fontfile "Hack-Regular.ttf"
+#include <random>
 
 using namespace sf;
 using namespace std;
@@ -15,6 +16,7 @@ Game::Game() {
     r = new RenderWindow(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE);
     chicken = new Chicken();
     initHumans();
+    srand(time(0));
 }
 
 /*!

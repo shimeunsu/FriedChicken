@@ -10,7 +10,14 @@ Human::Human(float posX, float posY) {
     originalPosX = posX;
     originalPosY = posY;
     Texture* texture = new Texture();
-    texture->loadFromFile("sprite/human.png");
+    
+    if (rand() % 2 == 0) {
+      texture->loadFromFile("sprite/human.png");
+    }
+    else{
+        texture->loadFromFile("sprite/human2.png");
+    }
+  
     shape = new Sprite(*texture);
 }
 
