@@ -43,7 +43,7 @@ public:
      \brief "Load the game over screen"
      \param "Pointer to the window and the score to print"
      */
-    void gameOver(sf::RenderWindow* r, int score);
+    void gameOver(sf::RenderWindow* r);
     
     /*!
      \brief "Load the victory screen"
