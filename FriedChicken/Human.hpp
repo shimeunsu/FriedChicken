@@ -27,4 +27,5 @@ public:
 
 private:
     float originalPosX, originalPosY;
+    float speed;
 };
