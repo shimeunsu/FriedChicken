@@ -9,19 +9,52 @@
 class Game{
 
 public:
+    /*!
+     \brief "Constructor that creates the game with the window and sprites"
+     \param "none"
+     */
     Game();
-    void Loop();
+    
+    /*!
+     \brief "Create all the humans"
+     \param "none"
+     */
     void initHumans();
-    void gameOver(sf::RenderWindow* r, int score);
-    void gameWin(sf::RenderWindow* r, int score);
+    
+    /*!
+     \brief "Loop to run the game, listen to events, and run the score"
+     \param "none"
+     */
+    void Loop();
+    
+    /*!
+     \brief "Set the title of window"
+     \param "Pointer to the window and the score to print"
+     */
     void updateTitle(sf::Window* w, int score);
+    
+    /*!
+     \brief "Reset the game when playing again"
+     \param "none"
+     */
     void reset();
+    
+    /*!
+     \brief "Load the game over screen"
+     \param "Pointer to the window and the score to print"
+     */
+    void gameOver(sf::RenderWindow* r, int score);
+    
+    /*!
+     \brief "Load the victory screen"
+     \param "Pointer to the window and the score to print"
+     */
+    void gameWin(sf::RenderWindow* r, int score);
 
 private:
     sf::RenderWindow* r;
     Chicken* chicken;
     sf::Clock* gameClock;
     int score;
-
     std::vector<Human*> humans;
 };

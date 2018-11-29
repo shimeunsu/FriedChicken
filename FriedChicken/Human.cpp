@@ -2,6 +2,10 @@
 
 using namespace sf;
 
+/*!
+ \brief "Constructor that creates the human"
+ \param "X and Y coordinates of the position"
+ */
 Human::Human(float posX, float posY) {
     originalPosX = posX;
     originalPosY = posY;
@@ -10,6 +14,10 @@ Human::Human(float posX, float posY) {
     shape = new Sprite(*texture);
 }
 
+/*!
+ \brief "Move the human down"
+ \param "The size of the window"
+ */
 void Human::MoveDown(Vector2u size) {
     shape->move(0.0, HUMAN_MOVEMENT_SPEED);
     if (shape->getPosition().x > size.x){
@@ -25,6 +33,10 @@ void Human::MoveDown(Vector2u size) {
     }
 }
 
+/*!
+ \brief "Move the human up"
+ \param "The size of the window"
+ */
 void Human::MoveUp(Vector2u size){
     shape->move(0.0, -HUMAN_MOVEMENT_SPEED);
     if (shape->getPosition().x > size.x){
@@ -38,8 +50,4 @@ void Human::MoveUp(Vector2u size){
     if (shape->getPosition().y < 0){
         shape->setPosition(Vector2f(shape->getPosition().x, WINDOW_HEIGHT));
     }
-
 }
-
-
-

@@ -1,4 +1,8 @@
 #pragma once
+
+/*!
+ \brief "Constant definition file"
+ */
 #define CHICKEN_MOVEMENT_AMOUNT 30
 #define CHICKEN_SIZE_WIDTH 30
 #define CHICKEN_SIZE_HEIGHT 30
