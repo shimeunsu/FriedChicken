@@ -66,7 +66,7 @@ void Game::Loop() {
                 if (i % 2 == 0) {
                     human->Move(r->getSize(),HUMAN_MOVEMENT_SPEED);
                 } else {
-                    human->Move(r->getSize(),-HUMAN_MOVEMENT_SPEED);
+                    human->Move(r->getSize(),HUMAN_MOVEMENT_SPEED);
                 }
                 i++;
             }
