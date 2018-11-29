@@ -17,3 +17,5 @@
 #define MAX_SCORE 1000
 
 #define WINDOW_TITLE "FRIED CHICKEN"
+
+#define BG_WINDOW sf::Color(222,184,135)

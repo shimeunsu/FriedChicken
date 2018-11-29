@@ -80,13 +80,13 @@ void Game::Loop() {
         //! Human Chicken collision detection
         for (Human* human: humans) {
             if(chicken->GetShape()->getGlobalBounds().intersects(human->GetShape()->getGlobalBounds())){
-                gameOver(r,score);
+                gameOver(r);
                     }
         }
 
         
         //! Set the background colour
-        r->clear(Color(222,184,135));
+        r->clear(BG_WINDOW);
 
         
         //! Draw the humans
@@ -122,16 +122,16 @@ void Game::reset() {
 
 /*!
  \brief "Load the game over screen"
- \param "Pointer to the window and the score to print"
+ \param "Pointer to the window"
  */
-void Game::gameOver(RenderWindow* r, int score) {
-    r->clear(Color(222,184,135));
+void Game::gameOver(RenderWindow* r) {
+    r->clear(BG_WINDOW);
     Text gameOverMsg;
     Font f;
     f.loadFromFile(fontfile);
     gameOverMsg.setFont(f);
     stringstream msgText;
-    msgText << "Game Over!" << endl << "Score: " << score << endl << "Press Q to quit" << endl << "Press R to retry" << endl;
+    msgText << "Game Over!" << endl << "Press Q to quit" << endl << "Press R to retry" << endl;
     gameOverMsg.setString(msgText.str());
     gameOverMsg.setCharacterSize(20);
     gameOverMsg.setFillColor(Color::White);
@@ -159,7 +159,7 @@ void Game::gameOver(RenderWindow* r, int score) {
  \param "Pointer to the window and the score to print"
  */
 void Game::gameWin(RenderWindow* r, int score) {
-    r->clear(Color(222,184,135));
+    r->clear(BG_WINDOW);
     Text gameOverMsg;
     Font f;
     f.loadFromFile(fontfile);
