@@ -17,9 +17,13 @@ public:
      \brief "Move the human down or up"
      \param "The size of the window and takes speed"
      */
-    void Move(sf::Vector2u size, float speed);
+    void MoveDown(sf::Vector2u size, float speed);
     
- 
+    /*!
+     \brief "Move the human up"
+     \param "The size of the window and takes speed"
+     */
+    void MoveUp(sf::Vector2u size, float speed);
 
 private:
     float originalPosX, originalPosY;
