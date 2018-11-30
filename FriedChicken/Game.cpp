@@ -141,11 +141,10 @@ void Game::gameOver(RenderWindow* rWindow) {
     gameOverMsg.setCharacterSize(20);
     gameOverMsg.setFillColor(Color::White);
     gameOverMsg.setPosition(10,10);
-    
-    // picture of fried chicken
-    ifstream image;
-    image.open("sprite/chicken.png");
-    
+    Texture* texture = new Texture();
+    texture->loadFromFile("sprite/chicken.png");
+    shape = new Sprite(*texture);
+    shape->setPosition(0,WINDOW_HEIGHT / 2);
     rWindow->draw(gameOverMsg);
     rWindow->display();
     while(rWindow->isOpen()) {
