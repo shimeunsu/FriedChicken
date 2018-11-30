@@ -141,9 +141,7 @@ void Game::gameOver(RenderWindow* rWindow) {
     gameOverMsg.setCharacterSize(20);
     gameOverMsg.setFillColor(Color::White);
     gameOverMsg.setPosition(10,10);
-    Texture* texture = new Texture();
-    texture->loadFromFile("sprite/chicken.png");
-    texture->setPosition(0,WINDOW_HEIGHT / 2);
+    chicken.
     rWindow->draw(gameOverMsg);
     rWindow->display();
     while(rWindow->isOpen()) {
