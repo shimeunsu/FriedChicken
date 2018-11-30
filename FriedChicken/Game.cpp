@@ -13,7 +13,7 @@ using namespace std;
 Game::Game() {
     gameClock = new Clock();
     score = MAX_SCORE;
-    r = new RenderWindow(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE);
+    rWindow = new RenderWindow(VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), WINDOW_TITLE);
     chicken = new Chicken();
     initHumans();
     srand(time(0));
@@ -41,21 +41,21 @@ void Game::initHumans() {
  \param "none"
  */
 void Game::Loop() {
-    while (r->isOpen()) {
+    while (rWindow->isOpen()) {
         Event e;
         if (gameClock->getElapsedTime() > seconds(.1)) {
             score--;
-            updateTitle(r, score);
+            updateTitle(rWindow, score);
             if(score == 0){
-                r->close();
+                rWindow->close();
             }
             gameClock->restart();
             
             //! Event listening
-            while (r->pollEvent(e)) {
+            while (rWindow->pollEvent(e)) {
                 switch(e.type) {
                     case Event::EventType::Closed:
-                        r->close();
+                        rWindow->close();
                         break;
                     case Event::EventType::KeyPressed:
                         if (e.key.code == Keyboard::Up ||
@@ -71,9 +71,9 @@ void Game::Loop() {
             int i = 0;
             for (Human* human: humans) {
                 if (i % 2 == 0) {
-                    human->MoveDown(r->getSize(),HUMAN_MOVEMENT_SPEED/2);
+                    human->MoveDown(rWindow->getSize(),HUMAN_MOVEMENT_SPEED/2);
                 } else {
-                    human->MoveUp(r->getSize(),HUMAN_MOVEMENT_SPEED);
+                    human->MoveUp(rWindow->getSize(),HUMAN_MOVEMENT_SPEED);
                 }
                 i++;
             }
@@ -81,30 +81,30 @@ void Game::Loop() {
         
         //! Victory detection
         if (chicken->GetShape()->getPosition().x > WINDOW_WIDTH - 2*CHICKEN_SIZE_WIDTH){
-            gameWin(r,score);
+            gameWin(rWindow,score);
         }
         
         //! Human Chicken collision detection
         for (Human* human: humans) {
             if(chicken->GetShape()->getGlobalBounds().intersects(human->GetShape()->getGlobalBounds())){
-                gameOver(r);
+                gameOver(rWindow);
                     }
         }
 
         
         //! Set the background colour
-        r->clear(BG_WINDOW);
+        rWindow->clear(BG_WINDOW);
 
         
         //! Draw the humans
         for (Human* human: humans){
-          r->draw(*human->GetShape());
+          rWindow->draw(*human->GetShape());
         }
 
         //! Draw the chickens
-        r->draw(*chicken->GetShape());
+        rWindow->draw(*chicken->GetShape());
 
-        r->display();
+        rWindow->display();
     }
 }
 
@@ -112,10 +112,10 @@ void Game::Loop() {
  \brief "Set the title of window"
  \param "Pointer to the window and the score to print"
  */
-void Game::updateTitle(Window* w, int score) {
+void Game::updateTitle(Window* window, int score) {
     stringstream ss;
     ss << WINDOW_TITLE << ": " << score;
-    w->setTitle(ss.str());
+    window->setTitle(ss.str());
 }
 
 /*!
@@ -131,8 +131,8 @@ void Game::reset() {
  \brief "Load the game over screen"
  \param "Pointer to the window"
  */
-void Game::gameOver(RenderWindow* r) {
-    r->clear(BG_WINDOW);
+void Game::gameOver(RenderWindow* rWindow) {
+    rWindow->clear(BG_WINDOW);
     Text gameOverMsg;
     Font f;
     f.loadFromFile(fontfile);
@@ -143,13 +143,13 @@ void Game::gameOver(RenderWindow* r) {
     gameOverMsg.setCharacterSize(20);
     gameOverMsg.setFillColor(Color::White);
     gameOverMsg.setPosition(10,10);
-    r->draw(gameOverMsg);
-    r->display();
-    while(r->isOpen()) {
+    rWindow->draw(gameOverMsg);
+    rWindow->display();
+    while(rWindow->isOpen()) {
         Event e;
-        while(r->pollEvent(e)) {
+        while(rWindow->pollEvent(e)) {
             if (e.key.code == Keyboard::Q) {
-                r->close();
+                rWindow->close();
             }
             else if (e.key.code == Keyboard::R) {
                 reset();
@@ -157,7 +157,7 @@ void Game::gameOver(RenderWindow* r) {
             }
         }
     }
-    r->close();
+    rWindow->close();
     exit(0);
 }
 
@@ -165,8 +165,8 @@ void Game::gameOver(RenderWindow* r) {
  \brief "Load the victory screen"
  \param "Pointer to the window and the score to print"
  */
-void Game::gameWin(RenderWindow* r, int score) {
-    r->clear(BG_WINDOW);
+void Game::gameWin(RenderWindow* rWindow, int score) {
+    rWindow->clear(BG_WINDOW);
     Text gameOverMsg;
     Font f;
     f.loadFromFile(fontfile);
@@ -177,13 +177,13 @@ void Game::gameWin(RenderWindow* r, int score) {
     gameOverMsg.setCharacterSize(20);
     gameOverMsg.setFillColor(Color::White);
     gameOverMsg.setPosition(10,10);
-    r->draw(gameOverMsg);
-    r->display();
-    while(r->isOpen()) {
+    rWindow->draw(gameOverMsg);
+    rWindow->display();
+    while(rWindow->isOpen()) {
         Event e;
-        while(r->pollEvent(e)) {
+        while(rWindow->pollEvent(e)) {
             if (e.key.code == Keyboard::Q) {
-                r->close();
+                rWindow->close();
             }
             else if (e.key.code == Keyboard::R) {
                 reset();
@@ -191,6 +191,6 @@ void Game::gameWin(RenderWindow* r, int score) {
             }
         }
     }
-    r->close();
+    rWindow->close();
     exit(0);
 }

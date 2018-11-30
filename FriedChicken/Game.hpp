@@ -43,16 +43,16 @@ public:
      \brief "Load the game over screen"
      \param "Pointer to the window and the score to print"
      */
-    void gameOver(sf::RenderWindow* r);
+    void gameOver(sf::RenderWindow* rWindow);
     
     /*!
      \brief "Load the victory screen"
      \param "Pointer to the window and the score to print"
      */
-    void gameWin(sf::RenderWindow* r, int score);
+    void gameWin(sf::RenderWindow* rWindow, int score);
 
 private:
-    sf::RenderWindow* r;
+    sf::RenderWindow* rWindow;
     Chicken* chicken;
     sf::Clock* gameClock;
     int score;
