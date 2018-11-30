@@ -6,24 +6,24 @@
 #include "Human.hpp"
 #include "DEFINITIONS.hpp"
 
+/*!
+ \brief "Game class header to generate different aspects of the game"
+ */
 class Game{
 
 public:
     /*!
      \brief "Constructor that creates the game with the window and sprites"
-     \param "none"
      */
     Game();
     
     /*!
      \brief "Create all the humans"
-     \param "none"
      */
     void initHumans();
     
     /*!
      \brief "Loop to run the game, listen to events, and run the score"
-     \param "none"
      */
     void Loop();
     
@@ -35,7 +35,6 @@ public:
     
     /*!
      \brief "Reset the game when playing again"
-     \param "none"
      */
     void reset();
     

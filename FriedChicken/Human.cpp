@@ -5,6 +5,7 @@ using namespace sf;
 /*!
  \brief "Constructor that creates the human"
  \param "X and Y coordinates of the position"
+ \return "Human object"
  */
 Human::Human(float posX, float posY) {
     originalPosX = posX;
@@ -17,13 +18,12 @@ Human::Human(float posX, float posY) {
     else{
         texture->loadFromFile("sprite/human2.png");
     }
-  
     shape = new Sprite(*texture);
 }
 
 /*!
  \brief "Move the human down"
- \param "The size of the window"
+ \param "The size of the window and takes speed"
  */
 void Human::MoveDown(Vector2u size, float speed) {
     shape->move(0.0, speed);
@@ -42,7 +42,7 @@ void Human::MoveDown(Vector2u size, float speed) {
 
 /*!
  \brief "Move the human up"
- \param "The size of the window"
+ \param "The size of the window and takes speed"
  */
 void Human::MoveUp(Vector2u size, float speed){
     shape->move(0.0, -speed);

@@ -5,7 +5,7 @@
 #include "DEFINITIONS.hpp"
 
 /*!
- \brief "Chicken class header"
+ \brief "Chicken class header that creates the hero chicken object trying to cross the desert plane"
  \pre "Inherits from Base Object"
  */
 class Chicken : public BaseObject{
@@ -13,7 +13,7 @@ class Chicken : public BaseObject{
 public:
     /*!
      \brief "Constructor that creates the chicken"
-     \param "none"
+     \return "Chicken object"
      */
     Chicken();
     

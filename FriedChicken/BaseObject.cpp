@@ -3,14 +3,13 @@
 using namespace sf;
 
 /*!
- \brief "Parent object class for Chicken and Human"
- \param "none"
+ \brief "Base Object class header that acts as a parent object for the chicken and humans"
  */
 BaseObject::BaseObject() {}
 
 /*!
- \brief "Return a sprite pointer"
- \param "none"
+ \brief "Get function that returns the object"
+ \return "Return a pointer of the sprite object"
  */
 Sprite* BaseObject::GetShape(){
     return shape;

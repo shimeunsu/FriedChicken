@@ -5,8 +5,8 @@
 using namespace sf;
 
 /*!
- \brief "Constructor that creates the chicken"
- \param "none"
+ \brief "Chicken class header that creates the hero chicken object trying to cross the desert plane"
+ \return "Chicken object"
  */
 Chicken::Chicken() {
     Texture* texture = new Texture();

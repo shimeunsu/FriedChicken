@@ -3,20 +3,18 @@
 #include <iostream>
 
 /*!
- \brief "Base Object class header"
- \param "none"
+ \brief "Base Object class header that acts as a parent object for the chicken and humans"
  */
 class BaseObject {
 public:
     /*!
      \brief "Constructor that creates the object"
-     \param "none"
      */
     BaseObject();
     
     /*!
-     \brief "Return a pointer of the sprite object"
-     \param "none"
+     \brief "Get function that returns the object"
+     \return "Return a pointer of the sprite object"
      */
     sf::Sprite* GetShape();
     
