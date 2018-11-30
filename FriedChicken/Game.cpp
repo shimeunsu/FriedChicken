@@ -8,7 +8,6 @@ using namespace std;
 
 /*!
  \brief "Constructor that creates the game with the window and sprites"
- \param "none"
  */
 Game::Game() {
     gameClock = new Clock();
@@ -21,7 +20,6 @@ Game::Game() {
 
 /*!
  \brief "Create all the humans"
- \param "none"
  */
 void Game::initHumans() {
     for (int i = 0; i < (WINDOW_WIDTH / (HUMAN_SIZE_WIDTH * 5)) + 1; ++i) {
@@ -120,7 +118,6 @@ void Game::updateTitle(Window* window, int score) {
 
 /*!
  \brief "Reset the game when playing again"
- \param "none"
  */
 void Game::reset() {
     chicken->GetShape()->setPosition(0, WINDOW_HEIGHT / 2);
