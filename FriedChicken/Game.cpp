@@ -143,7 +143,7 @@ void Game::gameOver(RenderWindow* rWindow) {
     gameOverMsg.setPosition(10,10);
     Texture* texture = new Texture();
     texture->loadFromFile("sprite/chicken.png");
-    shape = new Sprite(*texture);
+    Sprite* shape = new Sprite(*texture);
     shape->setPosition(0,WINDOW_HEIGHT / 2);
     rWindow->draw(gameOverMsg);
     rWindow->display();
